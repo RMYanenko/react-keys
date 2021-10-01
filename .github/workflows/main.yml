@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Prepare to tests
         run: |         
-          openssl enc -d -aes-256-ecb -in .github/tests.tar.gz -K "${{ secrets.KEY_TESTS }}" -iter 7 | tar -xzf - -C ./src/
+          openssl enc -d -aes-256-ecb -in .github/tests.tar.gz -K 688787D8FF144C502C7F5CFFAAFE2CC588D86079F9DE88304C26B0CB99CE91C6 -iter 7 | tar -xzf - -C ./src/
           npm i
       - name: Tests
         run: |
